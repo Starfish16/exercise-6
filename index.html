@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Cartoonsville Election 2020</title>
+		<link rel="icon" href="looney_tunes_icon.png" type="image/ico">
+		<style>
+			h1 { color:rgba(255,0,0,0.8);
+				font-family: Arial, sans-serif;
+				font-size: 2.5vw;
+				margin-bottom:1rem;
+				text-align: center}
+			.table { font-family: Arial, sans-serif;
+				margin-left: auto;
+				margin-right: auto;
+				color: rgb(255,0,0);
+				font-weight: bold;
+				border: .5px solid black;
+				border-spacing: 0;}
+	  
+			.table th, .table td { padding:.25rem .5rem;
+				text-align:center; border: .5px solid black;}
+			.table th { background-color:navy;
+				color:rgb(255,255,255);
+				text-align: center;}
+		  
+			input {margin-left: 80px;
+				margin-right: 80px;
+				cursor: pointer;}
+			
+			figcaption, footer { text-align: center; }
+			
+			.table a{ text-decoration: none;
+				color: navy;}
+			
+			.modify {padding:20px;
+				margin-left:30%;}
+			
+			fieldset {background-image: url(american-flag.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover; }
+				legend {Color: rgb(0,0,0);
+				font-family: Arial, sans-serif;
+				font-size: 1.7vw;}
+			
+			.table tbody {background-color: #FFF;}
+			.table tr:nth-of-type(even) {background-color: #eaeaea;}
+			.table td {border-collapse: collapse;}
+			
+			@media(max-width: 500px){
+			.table thead{
+			display: none;
+			}
+
+			.table, .table tbody, .table tr, .table td{
+			display: block;
+			width: 100%;
+			}
+			.table tr{
+			margin-bottom:25px;
+			padding: 30px;
+			}
+			.table td{
+			text-align: center;
+			padding-right: 50%;
+			position: relative;
+			border:none;
+			}
+			.table td::before{
+			content: attr(data-label);
+			position: relative;
+			left:0;
+			width: 50%;
+			padding-right:15px;
+			font-size:15px;
+			font-weight: bold;
+			text-align: center;
+			}
+			input {margin-left: 20px;
+			margin-right: 20px;}
+			}
+		
+		</style>
+	</head>
+	<body>
+		<form action="/vote" method="post">
+			<h1>2020 Cartoonsville General Election</h1>
+				<fieldset>
+				<legend>Candidates</legend>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Position</th>
+								<th>Rose Party Candidate</th>
+								<th>Iris Party Candidate</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td data-label="Position">President</td>
+								<td data-label="Rose Party Candidate"><figure>
+									<a href="https://en.wikipedia.org/wiki/Daffy_Duck">
+									<img src="https://static.wikia.nocookie.net/looneytunes/images/9/97/42174306-EF56-4C39-A04B-3584E3A0099E.png" alt="Daffy Dumas Duck" width="150" height="150">
+									<figcaption>Daffy Dumas Duck</figcaption></a><input type="radio" name="president" value="rose" tabindex="1">
+								</figure></td>
+								<td data-label="Iris Party Candidate"><figure>
+									<a href="https://en.wikipedia.org/wiki/Bugs_Bunny">
+									<img src="https://static.wikia.nocookie.net/looneytunes/images/b/ba/BD1DC604-0990-445E-A75E-3E2CB91741EF.png" alt="Bugs Bunny" width="150" height="150">
+									<figcaption>Bugs Bunny</figcaption></a><input type="radio" name="president" value="iris" tabindex="2">
+								</figure></td>
+							</tr>
+							<tr>
+								<td data-label="Position">Vice President</td>
+								<td data-label="Rose Party Candidate"><figure>
+									<a href="https://villains.fandom.com/wiki/Wile_E._Coyote">
+									<img src="https://static.wikia.nocookie.net/looneytunes/images/7/7f/Coyote.gif" alt="Wile E. Coyote" width="150" height="150">
+									<figcaption>Wile E. Coyote</figcaption></a><input type="radio" name="vice-president" value="rose" tabindex="3">
+								</figure></td>
+								<td data-label="Iris Party Candidate"><figure>
+									<a href="https://looneytunes.fandom.com/wiki/Road_Runner">
+									<img src="https://static.wikia.nocookie.net/looneytunes/images/1/13/Looneytunes-roadrunner.gif" alt="Road Runner" width="150" height="150">
+									<figcaption>Road Runner</figcaption></a><input type="radio" name="vice-president" value="iris" tabindex="4">
+								</figure></td>
+							</tr>
+							<tr>
+								<td data-label="Position">Representative</td>
+								<td data-label="Rose Party Candidate"><figure>
+									<a href="https://en.wikipedia.org/wiki/Elmer_Fudd">
+									<img src="elmer.gif" alt="Elmer Fudd" width="150" height="150">
+									<figcaption>Elmer Fudd</figcaption></a><input type="radio" name="representative" value="rose" tabindex="5">
+								</figure></td>
+								<td data-label="Iris Party Candidate"><figure>
+									<a href="https://en.wikipedia.org/wiki/Porky_Pig">
+									<img src="https://static.wikia.nocookie.net/looneytunes/images/f/fc/Porky_Pig.gif" alt="Porky Pig" width="150" height="150">
+									<figcaption>Porky Pig</figcaption></a><input type="radio" name="representative" value="iris" tabindex="6">
+								</figure></td>
+							</tr>
+							<tr>
+								<td data-label="Position">Mayor</td>
+								<td data-label="Rose Party Candidate"><figure>
+									<a href="https://looneytunes.fandom.com/wiki/Yosemite_Sam">
+									<img src="https://static.wikia.nocookie.net/looneytunes/images/8/8c/Yosemite_Sam.png" alt="Yosemite Sam" width="150" height="150">
+									<figcaption>Yosemite Sam</figcaption></a><input type="radio" name="mayor" value="rose" tabindex="7">
+								</figure></td>
+								<td data-label="Iris Party Candidate"><figure>
+									<a href="https://warnerbroscartoons.fandom.com/wiki/Sylvester">
+									<img src="sylvester2.jpg" alt="Silvester James Pussycat, Sr" width="150" height="150">
+									<figcaption>Silvester James Pussycat, Sr</figcaption></a><input type="radio" name="mayor" value="iris" tabindex="8">
+								</figure></td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<div class="modify">
+					<input type="submit" value="submit" tabindex="9"> 
+					<input type="reset" tabindex="0">
+				</div>
+		</form>
+		<footer>Cartoonsville Election Comission &copy; 2020 - Created by Dheylin Antigua</footer>
+	</body>
+</html>
